@@ -1,14 +1,11 @@
 const ProductRow = ({ products }) => {
+
     return (
         <tbody>
-            {products.map((eachProduct) => {
-                return (
-                    <tr key={eachProduct.id}>
-                        <td style={{ color: (eachProduct.inStock ? 'black' : 'red') }}>{eachProduct.name}</td>
-                        <td>{eachProduct.price}</td>
-                    </tr>
-                )
-            })}
+            <tr key={products.id}>
+                <td style={{ color: (products.inStock ? 'black' : 'red') }}>{products.name}</td>
+                <td>{products.price}</td>
+            </tr>
         </tbody>
     )
 }

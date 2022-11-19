@@ -4,12 +4,16 @@ const ProductTable = ({ products }) => {
 
     return (
         <div className="conteiner">
-            <table className="table">
-                <thead className="table-header">
+            <table>
+                <thead>
                     <th>Name</th>
                     <th>Price</th>
                 </thead>
-                <ProductRow products={products} className="table-info" />
+                {products.map(eachRow => {
+                    return (
+                        <ProductRow products={eachRow} />
+                    )
+                })}
             </table>
         </div>
     )

@@ -5,12 +5,15 @@ import ProductTable from './ProductTable';
 
 function ProductsPage() {
   const [products, setProducts] = useState(jsonData);
+  const [inputSearch, setInputSearch] = useState(jsonData)
+  const [checkBox, setCheckBox] = useState(false)
 
   return (
     <div>
       <h1>IronStore</h1>
-      <SearchBar />
-      <ProductTable products={products} />
+      <SearchBar
+        products={products} setInputSearch={setInputSearch} />
+      <ProductTable products={inputSearch} />
     </div>
   )
 }
